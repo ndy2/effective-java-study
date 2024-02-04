@@ -180,5 +180,3 @@ StringOperation 의 하위 타입에서 같은 것이란 을 예상 할 수 있�
 enum 의 abstract class, class 에 대한 확장은 지원 되지 않으므로 이는 어쩔수 없다고 한다.
 이를 해결 하기 위해 lombok 등의 동적 코드 생성이나, 해당 기능을 위한 (static)helper class 를 활용 할 수 있다.
 
-## Enum 의 코드에 손을 댈 수 없는 상황에서 EnumMap 을 통해 기능의 확장을 흉내내자.
-
