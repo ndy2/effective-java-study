@@ -3,6 +3,7 @@
 > [!quote] 참고 자료
 > - oracle > java docs>classes and object > nested classes > [Anonymous Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html) 
 > - oracle > java docs>classes and object > nested classes > [Lambda Expression](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html) 
+> - baeldung > [synthetic constructs in java](https://www.baeldung.com/java-synthetic)
 
 ## Terminologies
 
