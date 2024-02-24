@@ -45,6 +45,8 @@ Thread thread = new Thread(() -> {System.out.println("Runnable!");})
 - Variable used in lambda expression should be final or effectively final
 - Variable 'y' is accessed from within inner class, needs to be final or effectively final
 
+![[effectivly-final.png]]
+
 ### 직렬화 자제
 
 두 방식 모두 직렬화를 극히 삼가야한다.
@@ -63,6 +65,10 @@ Thread thread = new Thread(() -> {System.out.println("Runnable!");})
 
 - 익명 클래스 -> this 는 자기 자신
 - Labdamd -> this 는 바깥 인스턴스
+
+### 람다의 한계
+
+람다식에서는 checked exception 을 처리할때 항상 try-catch 처리를 해 주어야 한다. 
 
 ### 심미성
 
