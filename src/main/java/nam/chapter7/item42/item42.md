@@ -51,7 +51,10 @@ Thread thread = new Thread(() -> {System.out.println("Runnable!");})
 ### 직렬화 자제
 
 두 방식 모두 직렬화를 극히 삼가야한다.
-- TBD
+> [!quote]
+> Serialization of inner classes, including local and anonymous classes, is strongly discouraged.
+> 
+> 이유 - 내부 클래스에 대해 Java Compiler 는 synthetic construct 라는 것을 자동으로 만드는데 이 구현이 compiler 마다, 즉, Java Version 마다 다를 수 있다.
 
 ## 차이점
 
@@ -65,7 +68,7 @@ Thread thread = new Thread(() -> {System.out.println("Runnable!");})
 ### `this` keyword 의 차이
 
 - 익명 클래스 -> this 는 자기 자신
-- Labdamd -> this 는 바깥 인스턴스
+- Lambda -> this 는 바깥 인스턴스
 
 ### 람다의 한계
 
