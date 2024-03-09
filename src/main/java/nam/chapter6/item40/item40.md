@@ -2,7 +2,6 @@
 
 > Consistently use the `Override` annotation
 
-
 ## Study with ChatGPT
 
 Q : 재정의를 했지만 @Override 를 안 써도 되?
@@ -16,4 +15,15 @@ Q : 재정의를 했지만 @Override 를 안 써도 되?
 > 
 > 결론적으로, `@Override` 어노테이션은 코드의 가독성과 유지보수성을 높이는데 도움이 되므로 사용하는 것이 좋습니다.
 
+**java.lang.Override.java**
 
+```java
+package java.lang;  
+  
+import java.lang.annotation.*;
+
+@Target(ElementType.METHOD)  
+@Retention(RetentionPolicy.SOURCE)  
+public @interface Override {  
+}
+```
