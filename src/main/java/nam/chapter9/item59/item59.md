@@ -16,6 +16,8 @@
 > • geeksforgeeks > https://www.geeksforgeeks.org/java-jdk-21-new-features-of-java-21/
 > • openjdk > jeps - https://openjdk.org/jeps/0
 
+![[Pasted image 20240421134802.png]]
+
 약간 잔소리 같은 이번장..
 
 Java 의 새로운 버전이 출시되어도 (어짜피 사용하지도 않아서) 관심도 별로 없고 디테일한 API 및 라이브러리 내부 보다는 겉으로 드러나는 **Language Features** 에 더 관심이 많이 가는것 같음
