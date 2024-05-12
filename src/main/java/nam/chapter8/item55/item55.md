@@ -28,7 +28,8 @@ String get2(String key) {
 // return value is Optional  
 Optional<String> get3(String key) {  
     // equivalent :  
-    // return Optional.ofNullable(underlying.get(kye))    if (!underlying.containsKey(key)) {  
+    // return Optional.ofNullable(underlying.get(kye))    
+    if (!underlying.containsKey(key)) {  
         return Optional.empty();  
     }  
     return Optional.of(underlying.get(key));  
@@ -67,7 +68,7 @@ switch(maybeString) {
 ```
 ### 잡설 2. JDBC 와 null 처리
 
-Java 의 오래된 Interface 인 ResultSet 을 이용해 Database 의 column 을 직접 처리하는 경우 null 처리가 필요한 경우가 있습니다.column 이 null 인 경우 몇몇 자료형에서는 null 이 아닌 기본값을 채워줍니다. 아래는 대표적인 예시 입니다.
+Java 의 오래된 Interface 인 ResultSet 을 이용해 Database 의 column 을 직접 처리하는 경우 null 처리가 필요한 경우가 있습니다. column 이 null 인 경우 몇몇 자료형에서는 null 이 아닌 기본값을 채워줍니다. 아래는 대표적인 예시 입니다.
 
 - `rs.getBoolean` -> `false` if column was null
 - `rs.getByte, rs.getShort, rs.getInt, rs.getLong, rs.getFloat, rs.getDouble` -> `0`if column was null

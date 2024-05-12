@@ -5,19 +5,42 @@
 
 - 기본 생성자에는 문서화 주석을 달 방법이 없으니 공개 클래스는 절대 기본 생성자를 사용하면 안된다.
 
-- `@throws` - unchecked exception 을 선언하여 전제조건을 나타낸다.
-`Arrays.sort` 의 javadoc 일부
+```java
+public class Person{
+	...
 
-```text
-public static void sort(int[] a,
-                        int fromIndex,
-                        int toIndex)
-
-Throws:
-IllegalArgumentException - if `fromIndex > toIndex`
-ArrayIndexOutOfBoundsException - if `fromIndex < 0` or `toIndex > a.length`
+	// 아래 코드가 없다면 사용할 수 있는 new Person() 생성자에는 주석을 달 수 없다.
+	// 필요하다면 factory method public 으로 제공할것
+	public Person(String name, int age){
+		this.name = name;
+		this.age = age;
+	}
+}
 ```
+
+## `Arrays.sort` 의 javadoc 일부
+
+- `@throws` -  unchecked exception 을 선언하여 전제조건을 나타낸다.
 - @param, @return - 인자와 반환값을 나타내는 태그
+
+
+```java
+/**  
+ * Sorts the specified range of the array into ascending order. The range * to be sorted extends from the index {@code fromIndex}, inclusive, to  
+ * the index {@code toIndex}, exclusive. If {@code fromIndex == toIndex},  
+ * the range to be sorted is empty. * * @implNote The sorting algorithm is a Dual-Pivot Quicksort  
+ * by Vladimir Yaroslavskiy, Jon Bentley, and Joshua Bloch. This algorithm * offers O(n log(n)) performance on all data sets, and is typically * faster than traditional (one-pivot) Quicksort implementations. 
+ * 
+ * @param a the array to be sorted  
+ * @param fromIndex the index of the first element, inclusive, to be sorted  
+ * @param toIndex the index of the last element, exclusive, to be sorted  
+ * 
+ * @throws IllegalArgumentException if {@code fromIndex > toIndex}  
+ * @throws ArrayIndexOutOfBoundsException  
+ *     if {@code fromIndex < 0} or {@code toIndex > a.length}  
+ */
+ public static void sort(int[] a, int fromIndex, int toIndex)
+```
 
 - 관례상 @throws 태그는 항상 if 으로 시작한다.
 - 관례상 @param, @return, @throws 태그에는 마침표를 붙이지 않는다.
@@ -59,4 +82,12 @@ Diagram 을 직관적으로 표현한 좋은 ~~Javadoc~~ ScalaDoc 예시
  */
 ```
 
+## JavaDoc 의 `@inheritDoc` 태그
+
+java.util.Map 을 상속하여 주석을 상속
+
+![[Pasted image 20240414131751.png]]
+
+
+![[Pasted image 20240414131754.png]]
 
