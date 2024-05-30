@@ -25,10 +25,10 @@
 > - gov.whitehouse.socks.mousefinder
 
 > [!EXAMPLE] undercore 가 필요한 패키지 이름 예시
-> - com.example_site
-> - com.record_.extends_
-> - com._123example
-> - com.keyword_123site
+> - `com.example_site`
+> - `com.record_.extends_`
+> - `com._123example`
+> - `com.keyword_123site`
 
 - 예외적으로 표준 라이브러리는 java/javax 로 시작한다. 
 
@@ -92,10 +92,11 @@ class User {
 	private long id; 
 	// private long userId; 
 }
+
+user.id
+user.userId
 ```
-
 메서드의 짝을 맞추자
-
 - show/hide
 - present/dismiss
 - start/stop

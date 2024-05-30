@@ -45,6 +45,7 @@ Optional<File> getFile(String path) throws FileNotFoundException{
 ```
 **to-be** 검사예외가 발생할 수 있는 상황을 미리 확인한다.
 
+
 ```java
 String path = "/path/to/file"
 if (existsFile(path)){
